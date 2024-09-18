@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Copy and Close</title>
+    <script>
+        function copyAndClose() {
+            const textToCopy = "Văn bản của bạn ở đây";
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            window.close();
+        }
+    </script>
+</head>
+<body onload="copyAndClose()">
+</body>
+</html>
